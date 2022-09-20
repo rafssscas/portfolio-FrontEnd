@@ -13,6 +13,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { HysComponent } from './componentes/hys/hys.component';
+import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +26,10 @@ import { MatListModule } from '@angular/material/list';
     AcercaDeComponent,
     FooterComponent,
     BannerComponent,
+    ExperienciaComponent,
+    EducacionComponent,
+    HysComponent,
+    ProyectoComponent,
 
   ],
   imports: [
@@ -31,7 +40,8 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
