@@ -18,6 +18,10 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './componentes/hys/hys.component';
 import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './componentes/home/home.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,8 @@ import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
     EducacionComponent,
     HysComponent,
     ProyectoComponent,
+    HomeComponent,
+    LoginComponent,
 
   ],
   imports: [
@@ -41,7 +47,9 @@ import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
