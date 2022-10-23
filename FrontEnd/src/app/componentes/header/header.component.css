@@ -1,6 +1,11 @@
 #logoAP{
   margin-bottom: 20px;
-}
+  }
 .nav{
   padding: 20px;
+}
+.carousel {
+  border: 5px solid white;
+  border-radius: 1rem;
+
 }

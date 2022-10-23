@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
@@ -22,6 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MapaComponent } from './componentes/mapa/mapa.component';
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
+
+
 
 @NgModule({
   declarations: [
@@ -36,6 +40,8 @@ import { AppRoutingModule } from './app-routing.module';
     ProyectoComponent,
     HomeComponent,
     LoginComponent,
+    MapaComponent,
+    NewExperienciaComponent
 
   ],
   imports: [
@@ -49,9 +55,12 @@ import { AppRoutingModule } from './app-routing.module';
     MatListModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
