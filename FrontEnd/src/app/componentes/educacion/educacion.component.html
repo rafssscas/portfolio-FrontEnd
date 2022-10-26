@@ -1,28 +1,57 @@
+<div class="row">
+  <div class="text-center"><h1 style="font-family: cursive;">EDUCACION</h1></div>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+      Agregar Educacion
+    </button>
+  </div>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+
+
+    <table class="table text-white">
+      <tbody>
+      <tr *ngFor="let Educacion of educacion">
+        <td>
+          <h2>{{Educacion.nombreE}}</h2>
+        </td>
+        <td>{{Educacion.descripcionE}}</td>
+        <td *ngIf="isLogged">
+          <button class="btn btn-light" routerLink="/editexp/{{Educacion.id}}">
+            <i class="bi bi-pencil-square"></i>EDITAR
+          </button>
+        </td>
+        <td *ngIf="isLogged">
+          <button class="btn btn-danger" (click)="delete(Educacion.id)">
+            <i class="bi bi-trash-fill"></i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container py-4">
   <div class="text-center"><h1 style="font-family: cursive;">EDUCACIÓN</h1></div>
 
-  <!--<article class="postcard dark red">
-   <a class="postcard__img_link" href="#">
-     <img class="postcard__img" src="" alt="Image Title" style="height: 350px" />
-   </a>
-   <div class="postcard__text">
-     <h1 class="postcard__title red"><a href="#">Podcast Title  1</a></h1>
-     <div class="postcard__subtitle small">
-       <time datetime="2020-05-25 12:00:00">
-         <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-       </time>
-     </div>
-     <div class="postcard__bar"></div>
-     <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-     <ul class="postcard__tagbox">
-       <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-       <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-       <li class="tag__item play red">
-         <a href="#"><i class="fas fa-play mr-2"></i>Play Episode 1</a>
-       </li>
-     </ul>
-   </div>
- </article>-->
+
   <article class="postcard dark green align-items-center">
     <a class="postcard__img_link" >
       <img class="postcard__img" src="assets/banner/fcefyn1.jpeg" alt="Image Title" style="width: 350px" />

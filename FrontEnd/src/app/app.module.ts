@@ -24,6 +24,8 @@ import { LoginComponent } from './componentes/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MapaComponent } from './componentes/mapa/mapa.component';
 import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia/edit-experiencia.component';
+import { NeweducacionComponent } from './componentes/educacion/neweducacion.component';
 
 
 
@@ -41,7 +43,10 @@ import { NewExperienciaComponent } from './componentes/experiencia/new-experienc
     HomeComponent,
     LoginComponent,
     MapaComponent,
-    NewExperienciaComponent
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NeweducacionComponent,
+
 
   ],
   imports: [
