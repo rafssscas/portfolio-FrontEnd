@@ -9,6 +9,7 @@ import {environment} from "../../environments/environment";
 })
 export class SExperienciaService {
   URL = environment.URL + 'explab/';
+  //URL = ' https://racbackend.herokuapp.com/explab/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -9,6 +9,7 @@ import {Educacion} from "../model/educacion";
 })
 export class EducacionService {
   URL = environment.URL + 'educacion/';
+  //URL = ' https://racbackend.herokuapp.com/' + 'educacion/';
   constructor(private httpClient : HttpClient) { }
 
   public lista(): Observable<Educacion[]>{

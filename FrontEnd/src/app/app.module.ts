@@ -26,6 +26,9 @@ import { MapaComponent } from './componentes/mapa/mapa.component';
 import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './componentes/educacion/neweducacion.component';
+import { EditeducacionComponent } from './componentes/educacion/editeducacion.component';
+import { EditSkillComponent } from './componentes/hys/edit-skill.component';
+import { NewSkillComponent } from './componentes/hys/new-skill.component';
 
 
 
@@ -46,6 +49,9 @@ import { NeweducacionComponent } from './componentes/educacion/neweducacion.comp
     NewExperienciaComponent,
     EditExperienciaComponent,
     NeweducacionComponent,
+    EditeducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent,
 
 
   ],
