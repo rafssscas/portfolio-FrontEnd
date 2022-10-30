@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "frontendrac"
-  }
+    "default": "frontendrac-407e5",
+    "staging": "frontendrac-407e5"
+  },
+  "targets": {},
+  "etags": {}
 }
