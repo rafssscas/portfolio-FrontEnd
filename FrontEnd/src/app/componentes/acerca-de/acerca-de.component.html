@@ -1,25 +1,35 @@
 <html lang="en">
-<div class="card text-bg-dark text-center mb-3 " style="max-width;" id="baner">
-
+<div class="card text-bg-dark text-center mb-3">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="assets/logosPI/fotoperfil2.jpg" class="img-fluid rounded-5" width="80%"  alt="..." id="perfil">
+      <img src={{persona.img}} class="img-fluid"  alt="..." id="perfil">
     </div>
-    <div class="col-md-4">
-      <div class="card-body" style="padding-top: 55px;">
-        <h1 class="card-title" id="nombre" style="font-family: 'cursive';">{{persona.nombre}} {{persona.apellido}} Rafael Armando Castro</h1>
+    <div class="col-md-4 ">
+      <div class="card-body" id="nombre" >
+        <br>
+        <h1 class="card-title" style="font-family: 'cursive';">{{persona.nombre}} {{persona.apellido}}</h1>
         <h2 class="card-title" style="font-family: 'cursive';">FULL STACK DEVELOPER JR</h2>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card-body">
-        <p class="card-text" style="font-family: 'cursive';" style="padding-top: 10px;">Nací en La Quiaca - Jujuy un 28 de agosto de 1990, hace
+        <br>
+        <h1 class="card-text" style="font-family: 'cursive';" style="padding-top: 40px;">{{persona.descripcion}}
+        </h1>
+        <!-- <p class="card-text" style="font-family: 'cursive';" style="padding-top: 10px;">Nací en La Quiaca - Jujuy un 28 de agosto de 1990, hace
           32 años. Soy estudiante avanzado de Ingeniera Electrónica en la Universidad Nacional de Córdoba. Me capacite como desarrollador
           web en el programa “Argentina Programa”. Actualmente estoy profundizando mis conocimientos en BackEnd.-
-        </p>
-
+         </p>-->
       </div>
     </div>
   </div>
-</div>
+  <div>
+    <br>
+  <button type="button" class="btn btn-outline-light me-2" routerLink="/editacercade/1" *ngIf="isLogged">
+    <i class="bi bi-pencil-square"></i>
+    EDITAR
+  </button>
+    <br>
+  </div>
+  </div>
 

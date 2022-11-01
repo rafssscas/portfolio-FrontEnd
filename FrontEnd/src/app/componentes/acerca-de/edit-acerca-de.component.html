@@ -1,0 +1,38 @@
+<body class="card mb-3">
+    <main class="form-signin m-auto">
+        <img class="" src="/assets/logosPI/argprograma.png" alt="" id="logoLogin">
+        <h2 class="h3 mb-3 fw-normal text-start text-white" style="font-family: cursive;">Ingrese sus datos</h2>
+
+        <div class="row" *ngIf="persona">
+          <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+              <div class="form-group">
+                  <label for="nombre" class="text-white">Nombre:</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="apellido" class="text-white">Apellido:</label>
+                  <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+              </div>
+              <div class="form-group">
+                  <label for="descripcion" class="text-white">Descripcion:</label>
+                <textarea type="text" class="form-control" id="descripcion" rows="5" name="descripcion" [(ngModel)]="persona.descripcion" required></textarea>
+              </div>
+              <div class="form-group">
+                  <label for="img" class="text-white">Foto de perfil:</label>
+                  <input type="file" class="form-control" id="img" name="img" [(ngModel)]="persona.img" (change)="uploadImage($event)"
+                        accept=".jpg, .jpeg, .png">
+              </div>
+              <div class="imagen align-items-center">
+                  <img [src]="imageService.url" alt="" width="200px">
+              </div>
+              <br>
+                <button class="btn ov-btn-slide-close btn-primary" style="width: 100%;">ACTUALIZAR</button>
+            </form>
+          </div>
+        </div>
+            <br>
+    </main>
+</body>

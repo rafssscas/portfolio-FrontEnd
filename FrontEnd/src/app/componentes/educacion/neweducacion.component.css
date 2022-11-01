@@ -1,0 +1,76 @@
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding-bottom: 20px;
+  background-color: #212529 ;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-group:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: 1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#logoLogin{
+  margin-left: 30px;
+  width: 70%;
+  height: 35%;
+  padding-bottom: 20px;
+
+}
+
+
+/*** ESTILOS BOTÓN SLIDE CLOSE ***/
+.ov-btn-slide-close {
+  background: #212529; /* color de fondo */
+  color: #0d6efd; /* color de fuente */
+  border: 2px solid #0d6efd; /* tamaño y color de borde */
+  border-radius: 5px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+
+}
+.ov-btn-slide-close:before, .ov-btn-slide-close:after {
+  content: "";
+  z-index: -1;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: -50%;
+  background-color: #0d6efd; /* color de fondo hover */
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.ov-btn-slide-close:after {
+  left: 100%;
+}
+.ov-btn-slide-close:hover {
+  color: #fff; /* color de fuente hover */
+
+}
+.ov-btn-slide-close:hover:before {
+  left: 0;
+}
+.ov-btn-slide-close:hover:after {
+  left: 50%;
+}
+h2{
+  margin-top: 5px;
+
+}
+a{
+  justify-content: center;
+}

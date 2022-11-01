@@ -1,102 +1,40 @@
-<div class="row">
-  <div class="text-center"><h1 style="font-family: cursive;">EDUCACION</h1></div>
-  <div class="col-lg-2">
-    <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
-      Agregar Educacion
-    </button>
-  </div>
-
-  <div class="col lg 1"></div>
-  <div class="col-lg-11">
-
-
-    <table class="table text-white">
-      <tbody>
-      <tr *ngFor="let Educacion of educacion">
-        <td>
-          <h2>{{Educacion.nombreE}}</h2>
-        </td>
-        <td>{{Educacion.descripcionE}}</td>
-        <td *ngIf="isLogged">
-          <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
-            <i class="bi bi-pencil-square"></i>EDITAR
-          </button>
-        </td>
-        <td *ngIf="isLogged">
-          <button class="btn btn-danger" (click)="delete(Educacion.id)">
-            <i class="bi bi-trash-fill"></i>
-          </button>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-
-
-
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="container py-4">
-  <div class="text-center"><h1 style="font-family: cursive;">EDUCACIÓN</h1></div>
+   <div class="row">
+        <div class="text-center"><h1 style="font-family: cursive;">EDUCACION</h1></div>
+        <div class="col-lg-2">
+          <button type="button" class="btn btn-outline-light me-2" routerLink="/nuevaedu" *ngIf="isLogged">
+           AGREGAR EDUCACION
+         </button>
+        </div>
+        <article class="postcard dark align-items-center">
+          <table class="table text-white">
+            <tbody>
+               <tr *ngFor="let Educacion of educacion">
+                  <td>
+                    <div class="postcard__text text-center">
+                      <h1 class="postcard__title">
+                        <a style="font-family: cursive;">
+                          {{Educacion.nombreE}}
+                        </a>
+                      </h1>
+                    </div>
+                        <div class="postcard__bar text-center">{{Educacion.descripcionE}}</div>
+                  </td>
 
+                  <h1 *ngIf="isLogged">
+                        <h1 style="justify-items: flex-end;">
+                          <button class="btn btn-outline-light me-2" routerLink="/editedu/{{Educacion.id}}">
+                             <i class="bi bi-pencil-square"></i>
+                          </button>
+                        </h1>
+                           <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                               <i class="bi bi-trash-fill"></i>
+                           </button>
+                  </h1>
+               </tr>
+            </tbody>
+          </table>
+        </article>
+   </div>
+ </div>
 
-  <article class="postcard dark green align-items-center">
-    <a class="postcard__img_link" >
-      <img class="postcard__img" src="assets/banner/fcefyn1.jpeg" alt="Image Title" style="width: 350px" />
-    </a>
-    <div class="postcard__text text-center">
-      <h1 class="postcard__title green"><a style="font-family: cursive;" >Estudiante avanzado de Ingeniería Electrónica</a></h1>
-
-      <div class="postcard__bar">Ingeniería Electrónica, Facultad de Ciencias Exactas Físicas y Naturales, Universidad Nacional de Córdoba.
-      </div>
-      <ul class="postcard__tagbox text-start">
-        <li>2012 - Presente</li>
-        <li>Ciudad de Córdoba - Córdoba</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="postcard dark green align-items-center">
-    <a class="postcard__img_link" >
-      <img class="postcard__img" src="assets/banner/esc-normal.jpg" alt="Image Title" style="width: 350px" />
-    </a>
-    <div class="postcard__text text-center">
-      <h1 class="postcard__title green"><a style="font-family: cursive;" >Nivel Secundario Bachiller Común</a></h1>
-      <div class="postcard__preview-txt">Bachiller Común, Escuela Normal Superior “Gendarmería Nacional”.
-      </div>
-      <ul class="postcard__tagbox text-start">
-        <li>2004 - 2008</li>
-        <li>La Quiaca - Jujuy</li>
-
-      </ul>
-    </div>
-  </article >
-
-  <article class="postcard dark green  align-items-center ">
-    <a class="postcard__img_link" >
-      <img class="postcard__img" src="assets/banner/esc86.jpg" alt="Image Title" style="width: 350px" />
-    </a>
-    <div class="postcard__text" style="padding-left: 75px;">
-      <h1 class="postcard__title green text-center "><a style="font-family: cursive;" >Nivel Primario</a></h1>
-      <div class="postcard__preview-txt ">   Escuela N°86 Hipólito Irigoyen</div>
-      <ul class="postcard__tagbox text-start">
-        <li>1996 - 2003</li>
-        <li>La Quiaca - Jujuy</li>
-
-      </ul>
-    </div>
-  </article>
-
-</div>

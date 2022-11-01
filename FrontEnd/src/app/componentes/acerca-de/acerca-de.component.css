@@ -1,0 +1,14 @@
+#perfil{
+  margin-top: 40px;
+  border-radius: 50%;
+  border: 5px solid white;
+  align-items: center;
+  width: 60%;
+  text-align: center;
+
+}
+#nombre{
+  margin-top: 40px;
+
+}
+

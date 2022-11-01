@@ -1,19 +1,26 @@
+
+<body class="card mb-3">
+<main class="form-signin m-auto">
+  <img class="" src="/assets/logosPI/argprograma.png" alt="" id="logoLogin">
 <div class="container">
   <div class="row">
-    <div>
+
       <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
         <div class="form-group">
-          <label for="nombre">Nueva Skill</label>
+          <label for="nombre" class="text-white">Nueva Skill</label>
           <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
         </div>
         <div class="form-group">
-          <label for="porcentaje">Porcentaje</label>
+          <label for="porcentaje" class="text-white">Porcentaje</label>
           <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
         </div>
-        <button class="btn btn-primary">
-          Agregar skill
+        <br>
+        <button class="btn ov-btn-slide-close btn-primary" style="width: 100%;">
+          AGREGAR
         </button>
       </form>
-    </div>
+
   </div>
 </div>
+</main>
+</body>

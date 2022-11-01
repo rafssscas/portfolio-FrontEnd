@@ -1,46 +1,40 @@
-<div class="row">
-  <div class="text-center"><h1 style="font-family: cursive;">EXPERIENCIA LABORAL</h1></div>
-  <div class="col-lg-2">
-    <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
-      Nueva Experiencia
-    </button>
+<div class="container py-4">
+  <div class="row">
+    <div class="text-center"><h1 style="font-family: cursive;">EXPERIENCIA LABORAL</h1></div>
+        <div class="col-lg-2">
+          <button type="button" class="btn btn-outline-light me-2" routerLink="/nuevaexp" *ngIf="isLogged">
+            AGREGAR EXPERIENCIA
+          </button>
+        </div>
+        <article class="postcard dark align-items-center">
+          <table class="table text-white">
+            <tbody>
+               <tr *ngFor="let Experiencia of expe">
+                 <td>
+                   <div class="postcard__text text-center">
+                    <h1 class="postcard__title">
+                      <a style="font-family: cursive;">
+                        {{Experiencia.nombreE}}
+                      </a>
+                     </h1>
+                    </div>
+                       <div class="postcard__bar text-center">{{Experiencia.descripcionE}}</div>
+                 </td>
+                    <h1 *ngIf="isLogged">
+                      <h1 style="justify-items: flex-end;">
+                        <button class="btn btn-outline-light me-2"  routerLink="/editexp/{{Experiencia.id}}">
+                          <i class="bi bi-pencil-square"></i>
+                        </button>
+                      </h1>
+                        <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                           <i class="bi bi-trash-fill"></i>
+                       </button>
+                    </h1>
+               </tr>
+            </tbody>
+          </table>
+        </article>
+    </div>
   </div>
-
-  <div class="col lg 1"></div>
-  <div class="col-lg-11">
-
-
-    <table class="table text-white">
-      <tbody>
-         <tr *ngFor="let Experiencia of expe">
-           <td>
-           <h2>{{Experiencia.nombreE}}</h2>
-           </td>
-           <td>{{Experiencia.descripcionE}}</td>
-           <td *ngIf="isLogged">
-             <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
-             <i class="bi bi-pencil-square"></i>EDITAR
-             </button>
-           </td>
-           <td *ngIf="isLogged">
-              <button class="btn btn-danger" (click)="delete(Experiencia.id)">
-                 <i class="bi bi-trash-fill"></i>
-              </button>
-           </td>
-         </tr>
-      </tbody>
-    </table>
-
-
-
-
-  </div>
-</div>
-
-
-
-
-
-
 
 
